@@ -1,0 +1,65 @@
+.container {
+  background-color: #eee;
+  height: 900px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-rows: 100px 20px 200px 20px 400px 20px 100px;
+  grid-template-rows: 100px 200px 400px 100px;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 200px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+      grid-template-areas: "head head head head" "box-1 box-2 box-3 sidebar" "main main main sidebar" "foot foot foot foot";
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+}
+.item--header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  background-color: orangered;
+  grid-area: head;
+}
+.item--box-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  background-color: yellowgreen;
+  grid-area: box-1;
+}
+.item--box-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  background-color: blueviolet;
+  grid-area: box-2;
+}
+.item--box-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  background-color: palevioletred;
+  grid-area: box-3;
+}
+.item--main-content {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  background-color: royalblue;
+  grid-area: main;
+}
+.item--sidebar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 7;
+  background-color: goldenrod;
+  grid-area: sidebar;
+}
+.item--footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  background-color: black;
+  grid-area: foot;
+}

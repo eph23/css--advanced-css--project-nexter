@@ -1,0 +1,64 @@
+@import "base";
+@import "typography";
+
+@import "sidebar";
+@import "header";
+@import "realtors";
+@import "features";
+@import "story";
+@import "homes";
+@import "gallery";
+@import "footer";
+
+// ========================================================
+
+.container {
+    background-color: #eee;
+    height: 900px;
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-template-areas:
+        "head head head head"
+        "box-1 box-2 box-3 sidebar"
+        "main main main sidebar"
+        "foot foot foot foot";
+}
+
+.item {
+    padding: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #fff;
+
+    &--header {
+        background-color: orangered;
+        grid-area: head;
+    }
+    &--box-1 {
+        background-color: yellowgreen;
+        grid-area: box-1;
+    }
+    &--box-2 {
+        background-color: blueviolet;
+        grid-area: box-2;
+    }
+    &--box-3 {
+        background-color: palevioletred;
+        grid-area: box-3;
+    }
+    &--main-content {
+        background-color: royalblue;
+        grid-area: main;
+    }
+    &--sidebar {
+        background-color: goldenrod;
+        grid-area: sidebar;
+    }
+    &--footer {
+        background-color: black;
+        grid-area: foot;
+    }
+}
