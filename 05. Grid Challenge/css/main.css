@@ -1,0 +1,99 @@
+.container {
+  background-color: #eee;
+  display: -ms-grid;
+  display: grid;
+  height: 900px;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 20%;
+  grid-template-columns: repeat(3, 1fr) 20%;
+  -ms-grid-rows: 100px 20px 1fr 20px 1fr 20px 100px;
+  grid-template-rows: 100px repeat(2, 1fr) 100px;
+  grid-gap: 20px;
+}.container > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}.container > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}.container > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}.container > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}.container > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}.container > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}.container > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}.container > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}.container > *:nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}.container > *:nth-child(10) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}.container > *:nth-child(11) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}.container > *:nth-child(12) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+}.container > *:nth-child(13) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}.container > *:nth-child(14) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}.container > *:nth-child(15) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}.container > *:nth-child(16) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 7;
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+}
+.item--header {
+  background-color: orangered;
+  grid-column: 1/-1;
+}
+.item--box-1 {
+  background-color: yellowgreen;
+}
+.item--box-2 {
+  background-color: blueviolet;
+}
+.item--box-3 {
+  background-color: palevioletred;
+}
+.item--main-content {
+  background-color: royalblue;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/span 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/span 2;
+}
+.item--sidebar {
+  background-color: goldenrod;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/span 3;
+  grid-column: 4/-1;
+}
+.item--footer {
+  background-color: black;
+  grid-column: 1/-1;
+}
