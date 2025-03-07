@@ -15,7 +15,8 @@ $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
 $bp-xl: 75em; //1200px
-$bp-lg: 75em; //
+$bp-lg: 62.5em; // 1000px
+
 *,
 *::before,
 *::after {
@@ -52,7 +53,7 @@ body {
         [center-end]
         minmax(6rem, 1fr) [full-end];
 
-    @media only screen and (max-width: $bp-xl) {
+    @media only screen and (max-width: $bp-lg) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
         grid-template-columns:
             [full-start] minmax(6rem, 1fr)
